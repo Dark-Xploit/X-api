@@ -130,7 +130,7 @@ function SignupFormDemo() {
           <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
           <div>
             Already a member?{" "}
-            <a href="#" className="text-neutral-200 hover:underline">
+            <a href="/login" className="text-neutral-200 hover:underline">
               Login
             </a>
           </div>
