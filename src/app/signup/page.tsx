@@ -56,7 +56,7 @@ function SignupFormDemo() {
       const reponse = res.data;
       if (reponse.status === 200) {
         console.log("User created successfully");
-        router.push("/signupsuccess");
+        router.push("/signupOk");
       } else if (reponse.status === 400) {
         console.log("User already exists");
       } else if (reponse.status === 403) {
