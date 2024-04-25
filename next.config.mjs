@@ -3,7 +3,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/api/*",
+        source: "/api/",
         destination: "https://api.thexapi.xyz/", // Replace with your backend URL
       },
     ];
