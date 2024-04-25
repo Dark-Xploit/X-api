@@ -14,7 +14,7 @@ function SignupFormDemo() {
     // Encrypt the data using AES encryption
     const ciphertext = CryptoJS.AES.encrypt(
       dataString,
-      "zNj2RaDU4ubyihJ15w"
+      process.env.HASHKEY || "", // Use the hash key from the environment variables
     ).toString();
     return ciphertext;
   }
