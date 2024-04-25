@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -23,12 +23,9 @@
   font-style: normal;
 }
 
-
 .balsa {
-  font-family: 'Balsamiq Sans', cursive;
-
+  font-family: "Balsamiq Sans", cursive;
 }
-
 
 /* vietnamese */
 @font-face {
@@ -104,7 +101,6 @@ body {
   width: 96%;
 }
 
-
 .dot-typing {
   position: relative;
   left: -9999px;
@@ -119,24 +115,70 @@ body {
 
 @keyframes dot-typing {
   0% {
-    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4, 10014px 0 0 0 #d4d4d4;
+    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4,
+      10014px 0 0 0 #d4d4d4;
   }
   16.667% {
-    box-shadow: 9984px -10px 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4, 10014px 0 0 0 #d4d4d4;
+    box-shadow: 9984px -10px 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4,
+      10014px 0 0 0 #d4d4d4;
   }
   33.333% {
-    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4, 10014px 0 0 0 #d4d4d4;
+    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4,
+      10014px 0 0 0 #d4d4d4;
   }
   50% {
-    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px -10px 0 0 #d4d4d4, 10014px 0 0 0 #d4d4d4;
+    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px -10px 0 0 #d4d4d4,
+      10014px 0 0 0 #d4d4d4;
   }
   66.667% {
-    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4, 10014px 0 0 0 #d4d4d4;
+    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4,
+      10014px 0 0 0 #d4d4d4;
   }
   83.333% {
-    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4, 10014px -10px 0 0 #d4d4d4;
+    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4,
+      10014px -10px 0 0 #d4d4d4;
   }
   100% {
-    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4, 10014px 0 0 0 #d4d4d4;
+    box-shadow: 9984px 0 0 0 #d4d4d4, 9999px 0 0 0 #d4d4d4,
+      10014px 0 0 0 #d4d4d4;
+  }
+}
+
+.slideinrl {
+  animation: slideInfromRight 0.5s ease-in-out;
+}
+
+@keyframes slideInfromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slideinlr {
+  animation: slideInfromLeft 0.5s ease-in-out;
+}
+
+@keyframes slideInfromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slideoutlr {
+  animation: slideOutfromLeft 0.5s ease-in-out;
+}
+
+@keyframes slideOutfromLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
