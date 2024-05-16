@@ -115,4 +115,4 @@ export const services: Services = {
   ],
 };
 
-export const BASE_URL = "http://localhost:3001";
+export const BASE_URL = "https://api.thexapi.xyz";
