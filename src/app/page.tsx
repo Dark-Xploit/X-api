@@ -22,7 +22,7 @@ function Home() {
           <div className="cursor-pointer">
             <IoMenu onClick={handleShowMenu} />
           </div>
-          <div className="font-bungee text-neutral-300 shadow-sm text-2xl md:text-5xl lg:text-5xl px-3 py-2 ">
+          <div className="font-balsa text-neutral-300 shadow-sm text-2xl md:text-5xl lg:text-5xl px-3 py-2 ">
             X-Api
           </div>
           <div className="cursor-pointer">Profile</div>
@@ -51,16 +51,16 @@ function Home() {
 
           {!selectedApi ? (
             <div className="flex flex-col w-full items-center justify-center">
-              <div className="text-4xl text-neutral-300 font-bungee">
+              <div className="text-4xl text-neutral-300 font-balsa">
                 Welcome to X-Api
               </div>
-              <div className="text-2xl text-neutral-300 font-bungee">
+              <div className="text-2xl text-neutral-300 font-balsa">
                 Choose an API to get started
               </div>
             </div>
           ) : (
             <div className="flex flex-col items-center w-full h-full  ">
-              <div className="text-4xl  text-neutral-300 font-bungee mt-10">
+              <div className="text-4xl  text-neutral-300 font-balsa mt-10">
                 Available {selectedApi} API
               </div>
               <div className="w-10/12 h-full my-3">

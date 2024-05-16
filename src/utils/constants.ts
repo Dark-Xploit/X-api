@@ -90,7 +90,7 @@ export const services: Services = {
   image: [
     {
       name: "Pexels",
-      description: "Get images from Unsplash",
+      description: "Get images from Pexels",
       method: "GET",
       endpoint: "/api/v1/pexel/image/",
       parameters: {
