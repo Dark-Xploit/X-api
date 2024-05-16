@@ -108,9 +108,9 @@ export const services: Services = {
       endpoint: "/api/v1/pexel/video/",
       parameters: {
         query: "string",
-        max_results: "number",
+        per_page: "number",
       },
-      url: "/api/v1/pexel/video/?query=cat&max_results=10",
+      url: "/api/v1/pexel/video/?query=cat&per_page=10",
     },
   ],
 };
