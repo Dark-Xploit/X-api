@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,6 +16,11 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+.font-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .font-bungee {
@@ -180,5 +186,6 @@ body {
   }
   to {
     transform: translateX(-100%);
+    visibility: hidden;
   }
 }

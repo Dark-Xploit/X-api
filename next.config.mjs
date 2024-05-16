@@ -3,12 +3,11 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/api/",
-        destination: "https://api.thexapi.xyz/", // Replace with your backend URL
+        source: "/api/:path*",
+        destination: "http://localhost:3001/:path*",
       },
     ];
   },
 };
 
 export default nextConfig;
-

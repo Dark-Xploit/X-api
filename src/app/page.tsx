@@ -1,35 +1,77 @@
 "use client";
-import { useScroll, useTransform } from "framer-motion";
-import React from "react";
-import { GoogleGeminiEffect } from "@/components/home";
+import React, { useEffect, useState } from "react";
+import { IoMenu } from "react-icons/io5";
+import Table from "../components/table";
+import { api, services, BASE_URL } from "../utils/constants";
 
-export default function GoogleGeminiEffectDemo() {
-  const ref = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
+function Home() {
+  const [showmenu, setShowmenu] = useState(false);
+  const [selectedApi, setSelectedApi] = useState("");
 
-  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
-  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
-  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
-  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
-  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+  const handleShowMenu = () => {
+    setShowmenu(!showmenu);
+  };
+  const handleSetApi = (key: string) => {
+    setSelectedApi(key);
+  };
 
   return (
-    <div
-      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
-      ref={ref}
-    >
-      <GoogleGeminiEffect
-        pathLengths={[
-          pathLengthFirst,
-          pathLengthSecond,
-          pathLengthThird,
-          pathLengthFourth,
-          pathLengthFifth,
-        ]}
-      />
-    </div>
+    <>
+      <div className="flex flex-col relative bg-gradient-to-br from-[#222831] to-[#393E46] items-center fadeIn h-screen balsa overflow-hidden w-screen">
+        <div className="flex w-full top-0 text-xl gap justify-between h-max shadow-lg rounded-b-lg shadow-red- items-center p-3 backdrop-blur-sm bg-[#39414d]">
+          <div className="cursor-pointer">
+            <IoMenu onClick={handleShowMenu} />
+          </div>
+          <div className="font-bungee text-neutral-300 shadow-sm text-2xl md:text-5xl lg:text-5xl px-3 py-2 ">
+            X-Api
+          </div>
+          <div className="cursor-pointer">Profile</div>
+        </div>
+
+        <div className="flex w-full h-full">
+          <div
+            id="menu"
+            className="backdrop-blur-sm w-2/12 h-full  mt-2 rounded slideinlr shadow-lg  transition-all duration-500 ease-in-out"
+          >
+            <div className="backdrop-blur-sm left-0 h-full flex pt-5 flex-col items-center rounded-lg gap-3 w-full ">
+              {api.map(
+                (item: { key: string; name: string }) =>
+                  services[item.key] && (
+                    <button
+                      onClick={() => handleSetApi(item.key)}
+                      key={item.key}
+                      className="p-2 rounded-lg  bg-neutral-200 bg-opacity-20 backdrop-blur-sm w-[90%] transition duration-300 hover:scale-105 cursor-pointer"
+                    >
+                      {item.name}
+                    </button>
+                  )
+              )}
+            </div>
+          </div>
+
+          {!selectedApi ? (
+            <div className="flex flex-col w-full items-center justify-center">
+              <div className="text-4xl text-neutral-300 font-bungee">
+                Welcome to X-Api
+              </div>
+              <div className="text-2xl text-neutral-300 font-bungee">
+                Choose an API to get started
+              </div>
+            </div>
+          ) : (
+            <div className="flex flex-col items-center w-full h-full  ">
+              <div className="text-4xl  text-neutral-300 font-bungee mt-10">
+                Available {selectedApi} API
+              </div>
+              <div className="w-10/12 h-full my-3">
+                <Table selectedApi={selectedApi} />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
   );
 }
+
+export default Home;
