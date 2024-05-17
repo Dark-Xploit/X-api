@@ -17,6 +17,22 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+@media (max-width: 768px) {
+  .border {
+    border: 1px solid #e2e8f0;
+  }
+  
+  .p-2 {
+    padding: 5px;
+  }
+  
+  .text-red-400 {
+    font-size: 0.875rem;
+  }
+}
+
+
 .font-mono {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;

@@ -1,5 +1,3 @@
-import { FaImage } from "react-icons/fa";
-import { GiArtificialIntelligence } from "react-icons/gi";
 export const api = [
   {
     name: "Image",
@@ -111,6 +109,82 @@ export const services: Services = {
         per_page: "number",
       },
       url: "/api/v1/pexel/video/?query=cat&per_page=10",
+    },
+  ],
+  search: [
+    {
+      name: "Github User",
+      description: "Search for a github user",
+      method: "GET",
+      endpoint: "/api/v1/search/github/users",
+      parameters: {
+        username: "string",
+      },
+      url: "/api/v1/search/github/users?username=Neeraj-x0",
+    },
+    {
+      name: "Youtube",
+      description: "Search for a youtube video",
+      method: "GET",
+      endpoint: "/api/v1/search/youtube",
+      parameters: {
+        query: "string",
+        limit: "number",
+      },
+      url: "/api/v1/search/youtube?query=X-Asena&limit=10",
+    },
+  ],
+  downloaders: [
+    {
+      name: "Instagram",
+      description: "Download Instagram Post/Reels",
+      method: "GET",
+      endpoint: "/api/v1/download/instagram",
+      parameters: {
+        url: "string",
+      },
+      url: "/api/v1/download/instagram?url=https://www.instagram.com/p/C6nCwuiIODs/",
+    },
+    {
+      name: "Youtube Audio",
+      description: "Download Youtube Audio",
+      method: "GET",
+      endpoint: "/api/v1/download/youtube/audio",
+      parameters: {
+        url: "string",
+      },
+      url: "/api/v1/download/youtube/audio?url=https://www.youtube.com/watch?v=9bZkp7q19f0",
+    },
+    {
+      name: "Youtube Video",
+      description: "Download Youtube Video",
+      method: "GET",
+      endpoint: "/api/v1/download/youtube/video",
+      parameters: {
+        url: "string",
+      },
+      url: "/api/v1/download/youtube/video?url=https://www.youtube.com/watch?v=9bZkp7q19f0",
+    },
+    {
+      name: "Youtube",
+      description: "Search and download youtube audio/video",
+      method: "GET",
+      endpoint: "/api/v1/download/youtube",
+      parameters: {
+        query: "string",
+        type: "string",
+      },
+      url: "/api/v1/download/youtube?query=Believer&type=audio",
+    },
+    {
+      name: "Xvideos",
+      description: "Download Xvideos Video",
+      method: "GET",
+      endpoint: "/api/v1/download/xvideos",
+      parameters: {
+        url: "string",
+      },
+      url: "/api/v1/download/xvideos?url=https://www.xvideos.com/video12345678/xxx",
     },
   ],
 };
