@@ -32,7 +32,12 @@ function Table({ selectedApi }: TableProps) {
                 </ul>
               </td>
               <td className="border p-2">
-                <a href={BASE_URL + item.url} className="text-red-400">
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href={BASE_URL + item.url}
+                  className="text-red-400"
+                >
                   {item.endpoint}
                 </a>
               </td>
