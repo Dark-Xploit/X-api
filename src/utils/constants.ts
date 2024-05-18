@@ -133,6 +133,16 @@ export const services: Services = {
       },
       url: "/api/v1/search/youtube?query=X-Asena&limit=10",
     },
+    {
+      name: "Anime",
+      description: "Search for an anime",
+      method: "GET",
+      endpoint: "/api/v1/search/anime",
+      parameters: {
+        query: "string",
+      },
+      url: "/api/v1/search/anime?query=One Piece",
+    },
   ],
   downloaders: [
     {
@@ -175,6 +185,16 @@ export const services: Services = {
         type: "string",
       },
       url: "/api/v1/download/youtube?query=Believer&type=audio",
+    },
+    {
+      name: "TeraBox",
+      description: "Download files from TeraBox",
+      method: "GET",
+      endpoint: "/api/v1/download/terabox",
+      parameters: {
+        link: "string",
+      },
+      url: "/api/v1/download/terabox?link=https://1024terabox.com/s/1i-7_U36aKkRkE8t-Mf3FvQ",
     },
     {
       name: "Xvideos",
