@@ -7,7 +7,7 @@ interface TableProps {
 
 function Table({ selectedApi }: TableProps) {
   return (
-    <div className="overflow-x-auto text-neutral-200">
+    <div className="lg:text-lg text-sm  text-neutral-200">
       <table className="w-full border-collapse  border-neutral-200 border">
         <thead>
           <tr className="text-left">
@@ -22,12 +22,16 @@ function Table({ selectedApi }: TableProps) {
           {services[selectedApi].map((item) => (
             <tr key={item.name}>
               <td className="border p-2  border-neutral-200 ">{item.name}</td>
-              <td className="border p-2  border-neutral-200 ">{item.description}</td>
+              <td className="border p-2  border-neutral-200 ">
+                {item.description}
+              </td>
               <td className="border p-2  border-neutral-200 ">{item.method}</td>
               <td className="border p-2  border-neutral-200 ">
-                <ul className="list-disc list-inside">
+                <ul className="list-disc w-max list-inside">
                   {Object.keys(item.parameters).map((key) => (
-                    <li key={key}>{key}</li>
+                    <li key={key}>
+                      {key} : {item.parameters[key]}
+                    </li>
                   ))}
                 </ul>
               </td>
