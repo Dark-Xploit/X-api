@@ -18,10 +18,10 @@ function Home() {
 
   return (
     <>
-      <div className="flex flex-col relative  bg-[#222831]  items-center fadeIn mb-5 justify-center chakra-petch-semibold-italic w-screen">
-        <div className="flex w-full top-0 text-xl sticky justify-between h-max shadow-lg rounded-b-lg shadow-red- items-center p-1 backdrop-blur-sm ">
+      <div className="flex flex-col relative  bg-[#222831]  items-center fadeIn mb-5 justify-center chakra-petch-semibold-italic ">
+        <div className="flex w-full top-0 text-xl    h-max shadow-lg rounded-b-lg shadow-red- items-center p-1 backdrop-blur-sm ">
           <div className="cursor-pointer pl-5">
-            <IoMenu onClick={handleShowMenu} />
+            <IoMenu className="text-neutral-300" onClick={handleShowMenu} />
           </div>
           <div
             onClick={() => setSelectedApi("")}
@@ -43,7 +43,7 @@ function Home() {
                       <button
                         onClick={() => handleSetApi(item.key)}
                         key={item.key}
-                        className="px-4 hover:bg-opacity-30 py-2 rounded-lg  bg-neutral-200 bg-opacity-20 backdrop-blur-sm  transition duration-200 hover:scale-105 cursor-pointer"
+                        className="px-4 hover:bg-opacity-30 py-2 rounded-lg text-neutral-300   bg-neutral-200 bg-opacity-20 backdrop-blur-sm  transition duration-200 hover:scale-105 cursor-pointer"
                       >
                         {item.name}
                       </button>

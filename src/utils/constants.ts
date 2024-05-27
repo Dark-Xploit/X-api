@@ -172,8 +172,9 @@ export const services: Services = {
       endpoint: "/api/v1/download/youtube/video",
       parameters: {
         url: "string",
+        quality: "string",
       },
-      url: "/api/v1/download/youtube/video?url=https://www.youtube.com/watch?v=9bZkp7q19f0",
+      url: "/api/v1/download/youtube/video?url=https://www.youtube.com/watch?v=9bZkp7q19f0&quality=720p",
     },
     {
       name: "Youtube",
