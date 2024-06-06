@@ -197,16 +197,16 @@ export const services: Services = {
       },
       url: "/api/v1/download/terabox?link=https://1024terabox.com/s/1i-7_U36aKkRkE8t-Mf3FvQ",
     },
-    {
-      name: "Xvideos",
-      description: "Download Xvideos Video",
-      method: "GET",
-      endpoint: "/api/v1/download/xvideos",
-      parameters: {
-        url: "string",
-      },
-      url: "/api/v1/download/xvideos?url=https://www.xvideos.com/video12345678/xxx",
-    },
+    // {
+    //   name: "Xvideos",
+    //   description: "Download Xvideos Video",
+    //   method: "GET",
+    //   endpoint: "/api/v1/download/xvideos",
+    //   parameters: {
+    //     url: "string",
+    //   },
+    //   url: "/api/v1/download/xvideos?url=https://www.xvideos.com/video12345678/xxx",
+    // },
   ],
 };
 
